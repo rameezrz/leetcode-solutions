@@ -30,4 +30,18 @@ const countMatches =  (items, ruleKey, ruleValue)=> {
     return count
 };
 
+var countMatches2 = function(items, ruleKey, ruleValue) {
+    let count = 0
+    const indexToEval = ruleKey === "type" ? 0 : ruleKey === "color" ? 1 : 2
+
+    items.forEach((item) => {
+        if (item[indexToEval] === ruleValue) {
+            count ++
+        }
+    })
+
+    return count;
+
+};
+
 console.log(countMatches(items,ruleKey,ruleValue));
