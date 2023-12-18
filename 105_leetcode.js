@@ -5,7 +5,7 @@ const createTargetArray = (nums, index)=> {
     for(let i=0;i<index.length;i++){
         target.splice(index[i],0,nums[i])
     }
-    return target
+    return {target}  
 };
 
 console.log(createTargetArray(nums,index));
